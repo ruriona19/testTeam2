@@ -16,3 +16,8 @@ export async function findProductById(id) {
   const products = await getData();
   return products.find((item) => item.Id === id);
 }
+
+export async function findProductByName(name) {
+  const products = await getData();
+  return products.find((item) => item.NameWithoutBrand === name);
+}
